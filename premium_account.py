@@ -1,5 +1,6 @@
 from account import Account
 
+
 class PremiumAccount(Account):
     def __init__(self, name, initial, withdrawal_fee, interest):
         Account.__init__(self, name, initial, withdrawal_fee)
@@ -18,6 +19,7 @@ class PremiumAccount(Account):
             self._balance += amount*self.interest
         else:
             self._balance += 1000*self.interest
+
 
 if __name__ == "__main__":
     Michelle = PremiumAccount("Michelle", 10000, 3, 0.05)

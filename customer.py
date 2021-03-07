@@ -1,5 +1,6 @@
 from person import Person
 
+
 class Customer(Person):
     def __init__(self, fname, lname, gender, birthdate, staff):
         Person.__init__(self, fname, lname, gender, birthdate)
@@ -16,6 +17,7 @@ class Customer(Person):
 
     def __repr__(self):
         return f"fname={self.fname}, lname={self.lname}, gender={self.gender}, birthdate={self.birthdate}"
+
 
 if __name__ == "__main__":
     Anna = Customer("Anna", "Smith", "Female", [1990, 11, 2], True)

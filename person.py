@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class Person:
     number_created = 0
 
@@ -25,16 +26,7 @@ class Person:
         self.lname = new_name
         return
 
+
 if __name__ == "__main__":
     p1 = Person("Nina", "Jolly", "Female", [1980, 12, 12])
     print(p1.full_name())
-
-
-
-
-
-
-
-
-
-
