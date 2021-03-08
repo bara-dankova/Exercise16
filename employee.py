@@ -40,7 +40,7 @@ class Employee(Person):
 
 
 if __name__ == "__main__":
-    worker_1 = Employee("John", "Doe", "Male", (datetime.datetime(1985, 12, 12)), "marketing", "Loud")
+    worker_1 = Employee("John", "Doe", "Male", "03/01/1985", "marketing", "Loud")
     print(worker_1.email)
     print(worker_1.total_hours())
     worker_1.work_hours(8)

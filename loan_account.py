@@ -43,6 +43,7 @@ class LoanAccount(Account):
 if __name__ == "__main__":
     loan_1 = LoanAccount("Bara", -10000, 3, 0.25, "good")
     #print(loan_1)
+    # TODO why does attribute initial not exist
     #print(loan_1.initial)
     print(loan_1.name)
     print(loan_1.credit_rating)

@@ -1,9 +1,5 @@
 from person import Person
-import datetime
 from datetime import date
-from datetime import datetime
-from datetime import timedelta
-
 
 class Customer(Person):
     def __init__(self, fname, lname, gender, birthdate, staff, covid_jab):

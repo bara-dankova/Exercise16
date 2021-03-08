@@ -12,6 +12,7 @@ Lisa.withdraw(100)
 Lisa.get_balance()
 print(Lisa)
 Lisa.get_account_number()
+print("-"*20)
 
 # instantiate a premium bank account object
 Michelle = PremiumAccount("Michelle", 10000, 3, 0.05)
@@ -30,7 +31,7 @@ print(Michelle)
 # test deposit with interest in premium account
 Michelle.deposit(1000)
 print(Michelle)
-
+print("-"*20)
 
 # tested loan account methods
 loan_1 = LoanAccount("Bara", -10000, 3, 0.25, "good")

@@ -28,5 +28,5 @@ class Person:
 
 
 if __name__ == "__main__":
-    p1 = Person("Nina", "Jolly", "Female", [1980, 12, 12])
+    p1 = Person("Nina", "Jolly", "Female", "04/05/1989")
     print(p1.full_name())
