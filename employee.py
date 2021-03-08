@@ -1,10 +1,11 @@
 from person import Person
 import random
+import datetime
 
 
 class Employee(Person):
     def __init__(self, fname, lname, gender, birthdate, sector, company):
-        # can we inherit less attributes than superclass has?
+        #TODO can we inherit less attributes than superclass has?
         Person.__init__(self, fname, lname, gender, birthdate)
         self.sector = sector
         self.company = company
@@ -17,9 +18,6 @@ class Employee(Person):
 
     def total_hours(self):
         print(self.hours)
-
-    # def work_email(self):
-    #   self.email = str(self.fname) + "." + str(self.lname) + "@" + str(self.company) + ".co.uk"
 
     @property # defining email like a method but can access it like an attribute
     def email(self):
@@ -38,11 +36,11 @@ class Employee(Person):
     #    self.employee_number = random.randint(1, 500)
 
     def __getattr__(self, fname):
-            return fname + " is here!"
+        return fname + " is here!"
 
 
 if __name__ == "__main__":
-    worker_1 = Employee("John", "Doe", "Male", [1985, 12, 12], "marketing", "Loud")
+    worker_1 = Employee("John", "Doe", "Male", (datetime.datetime(1985, 12, 12)), "marketing", "Loud")
     print(worker_1.email)
     print(worker_1.total_hours())
     worker_1.work_hours(8)
