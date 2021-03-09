@@ -1,6 +1,3 @@
-from datetime import datetime
-
-
 class Person:
     number_created = 0
 
@@ -14,19 +11,22 @@ class Person:
     def full_name(self):
         print(self.fname, self.lname)
         return # why are the returns added at the end of each method
-    # def days_until_birthday(self, birthdate):
-    #     now = datetime.now()
-    #     (t - datetime.datetime(1970, 1, 1)).total_seconds()
-    #     day =
-    #     year
-    #     month
-    #     birthdate
 
-    def change_of_name(self, new_name):
+    def change_of_lname(self, new_name):
         self.lname = new_name
         return
 
+    # could update the name using the hasattr
+    # def update_fullname_change(self):
+    #     if hasattr(self, "new_name"):
+    #         full_name = self.fname , self.lname
+    #         return full_name
+    #     else:
+    #         return self.full_name()
 
 if __name__ == "__main__":
     p1 = Person("Nina", "Jolly", "Female", "04/05/1989")
     print(p1.full_name())
+    p1.change_of_lname("Smith")
+    print(p1.full_name())
+    #print(p1.update_fullname_change())

@@ -11,6 +11,7 @@ class LoanAccount(Account):
     def get_credit_rating(self):
             print(self.name, "has a", str(self.credit_rating), "credit rating")
 
+    # commented out because initial attribute is not being recognised
     #def get_total_amount(self):
     #    print("You will pay a total of: {}".format((-1 * int(self.initial)) + (1 + self.interest)))
 

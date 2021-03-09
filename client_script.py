@@ -5,13 +5,12 @@ from customer import Customer
 # test Person attributes and methods
 p1 = Person("Nina", "Jolly", "Female", "12/12/1980")
 print(p1.full_name())
-p1.change_of_name("Batt")
+p1.change_of_lname("Batt")
 print(p1.full_name())
 # test number of people
 print("Number of people created:", Person.number_created)
 print("-"*20)
 # TODO why are there None's after each print
-
 
 
 # test worker attributes

@@ -1,6 +1,5 @@
 from person import Person
 import random
-import datetime
 
 
 class Employee(Person):
