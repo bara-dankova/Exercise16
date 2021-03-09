@@ -7,13 +7,13 @@ class PremiumAccount(Account):
         self.interest = interest
         self.withdrawals = 0
 
-    def withdraw(self, amount):
+    def make_withdrawal(self, amount):
         self._balance -= amount
         self.withdrawals += 1
         if self.withdrawals > 3:
             self._balance -= int(self.withdrawal_fee)
 
-    def deposit(self, amount):
+    def make_deposit_get_interest(self, amount):
         self._balance += amount
         if amount < 1000:
             self._balance += amount*self.interest

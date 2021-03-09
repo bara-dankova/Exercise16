@@ -1,6 +1,7 @@
 from person import Person
 from datetime import date
 
+
 class Customer(Person):
     def __init__(self, fname, lname, gender, birthdate, staff, covid_jab):
         Person.__init__(self, fname, lname, gender, birthdate)
@@ -8,9 +9,9 @@ class Customer(Person):
         self.loyalty_points = 0
         self.covid_jab = covid_jab
 
-    def shop(self, price):
+    def get_rewards(self, price):
         self.loyalty_points += price/10
-        if self.staff == True:
+        if self.staff == True:          # pycharm wants this statement simplified - how can we do this?
             self.loyalty_points += price/20
         print("You now have {} loyalty points to spend.".format(self.loyalty_points))
 
@@ -33,7 +34,7 @@ class Customer(Person):
             print("Overseas holiday vacations cannot be booked without a Covid vaccination.")
 
     def __str__(self):
-        return "Customer: \nName: {}, Surname: {}, Points: {}".format(self.fname, self.lname, self.loyalty_points)
+        return "Customer \nName: {}, Surname: {}, Points: {}".format(self.fname, self.lname, self.loyalty_points)
 
     def __repr__(self):
         return f"fname={self.fname}, lname={self.lname}, gender={self.gender}, birthdate={self.birthdate}"
@@ -41,13 +42,13 @@ class Customer(Person):
 
 if __name__ == "__main__":
     Anna = Customer("Anna", "Smith", "Female", "09/03/1996", True, False)
-    print(Anna.full_name())
+    print(Anna.get_full_name())
     print(Anna.loyalty_points)
-    Anna.shop(250)
+    Anna.get_rewards(250)
     print(Anna.loyalty_points)
     print(Anna.gender)
     print(Anna)
     Anna.book_trip()
     Anna.book_jab()
     Anna.book_trip()
-    Anna.shop(300)
+    Anna.get_rewards(300)

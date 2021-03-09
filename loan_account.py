@@ -19,7 +19,7 @@ class LoanAccount(Account):
         self._balance += amount
         return
 
-    def payment_schedule(self):
+    def see_payment_schedule(self):
         print("Loan payments should be made on: ")
         for m in range(1, 13):
             cal = calendar.monthcalendar(2021, m)  # get an list of the weeks in the given months
@@ -54,4 +54,4 @@ if __name__ == "__main__":
     loan_1.get_credit_rating()
     print(loan_1.make_payment(500))
     loan_1.get_balance()
-    loan_1.payment_schedule()
+    loan_1.see_payment_schedule()
